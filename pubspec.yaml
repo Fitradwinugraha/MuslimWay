@@ -67,6 +67,16 @@ flutter:
   assets:
     - assets/videos/
     - assets/images/
+    - assets/images/berdiri.jpg
+    - assets/images/duduk_diantara_dua_sujud.jpg
+    - assets/images/itidal.jpg
+    - assets/images/qunut.jpg
+    - assets/images/rukuk.jpg
+    - assets/images/sujud.jpg
+    - assets/images/tahiyat_akhir.jpg
+    - assets/images/tahiyat_awal.jpg
+    - assets/images/takbiratul_ihram.jpg
+    - assets/images/repeat.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
