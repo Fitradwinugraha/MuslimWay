@@ -46,15 +46,18 @@ class TataCaraSholat2Rakaat extends StatelessWidget {
         onTap: (index) {
           if (index == 1) {
             Navigator.pushReplacement(
-              
+              context,
+              MaterialPageRoute(builder: (context) => const HomeScreen()),
             );
           } else if (index == 3) {
             Navigator.pushReplacement(
-              
+              context,
+              MaterialPageRoute(builder: (context) => const MurottalScreen()),
             );
           } else if (index == 0) {
             Navigator.pushReplacement(
-              
+              context,
+              MaterialPageRoute(builder: (context) => const JadwalSholatPage()),
             );
           }
         },
