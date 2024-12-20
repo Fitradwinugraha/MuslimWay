@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screen/jadwal_sholat.dart';
+import 'package:myapp/screens/jadwal_sholat.dart';
+import 'package:myapp/screens/murottalScreen.dart';
+import 'package:myapp/screens/tata_caraScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -78,7 +80,24 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Murottal',
           ),
         ],
-        onTap: () {
+        currentIndex: 1,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const JadwalSholatPage()),
+            );
+          } else if (index == 2) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const TatacaraScreen()),
+            );
+          } else if (index == 3) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const MurottalScreen()),
+            );
+          }
         },
         showUnselectedLabels: true,
         unselectedItemColor: const Color.fromARGB(255, 71, 71, 71),

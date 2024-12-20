@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screen/jadwal_sholat.dart';
+import 'package:myapp/screens/jadwal_sholat.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

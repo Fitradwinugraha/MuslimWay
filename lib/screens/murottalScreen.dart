@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:myapp/screen/homeScreen.dart';
-import 'package:myapp/screen/jadwal_sholat.dart';
+import 'package:myapp/screens/homeScreen.dart';
+import 'package:myapp/screens/jadwal_sholat.dart';
+import 'package:myapp/screens/murottalScreen.dart';
 
 class MurottalScreen extends StatefulWidget {
   const MurottalScreen({super.key});
@@ -174,7 +175,26 @@ class _MurottalScreenState extends State<MurottalScreen> {
               label: 'Murottal',
             ),
           ],
-          onTap: () {},
+          currentIndex: 3,
+          onTap: (index) {
+            if (index == 1) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            } else if (index == 2) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const TatacaraScreen()),
+              );
+            } else if (index == 0) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const JadwalSholatPage()),
+              );
+            }
+          },
           showUnselectedLabels: true,
           unselectedItemColor: const Color.fromARGB(255, 71, 71, 71),
           unselectedLabelStyle:
