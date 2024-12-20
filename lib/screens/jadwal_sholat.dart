@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:myapp/screens/homeScreen.dart';
+import 'package:myapp/screens/murottalScreen.dart';
+import 'package:myapp/screens/tata_caraScreen.dart';
 
 class JadwalSholatPage extends StatefulWidget {
   const JadwalSholatPage({super.key});
@@ -103,7 +106,11 @@ class _JadwalSholatPageState extends State<JadwalSholatPage> {
                       ),
                     ),
                     onPressed: () {
-              
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()),
+                      );
                     },
                     child: Container(
                       width: 100, 
@@ -139,7 +146,11 @@ class _JadwalSholatPageState extends State<JadwalSholatPage> {
                       ),
                     ),
                     onPressed: () {
-           
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TatacaraScreen()),
+                      );
                     },
                     child: Container(
                       width: 100, 
@@ -175,7 +186,11 @@ class _JadwalSholatPageState extends State<JadwalSholatPage> {
                       ),
                     ),
                     onPressed: () {
-         
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MurottalScreen()),
+                      );
                     },
                     child: Container(
                       width: 100, 
@@ -330,7 +345,22 @@ class _JadwalSholatPageState extends State<JadwalSholatPage> {
         ],
         currentIndex: 0,
         onTap: (index) {
-
+          if (index == 1) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const HomeScreen()),
+            );
+          } else if (index == 2) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const TatacaraScreen()),
+            );
+          } else if (index == 3) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const MurottalScreen()),
+            );
+          }
         },
         showUnselectedLabels: true,
         unselectedItemColor: const Color.fromARGB(255, 71, 71, 71),
