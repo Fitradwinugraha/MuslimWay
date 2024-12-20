@@ -88,21 +88,36 @@ class TatacaraScreen extends StatelessWidget {
             title: const Text('Sholat Wajib 4 Rakaat (Isya, Ashar, Dzuhur)'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TataCaraSholat4Rakaat(),
+                ),
+              );
             },
           ),
           ListTile(
             title: const Text('Sholat Wajib 3 Rakaat (Maghrib)'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TataCaraSholat3Rakaat(),
+                ),
+              );
             },
           ),
           ListTile(
             title: const Text('Sholat Wajib 2 Rakaat (Subuh)'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TataCaraSholat2Rakaat(),
+                ),
+              );
             },
           ),
         ],
